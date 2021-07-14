@@ -1,0 +1,54 @@
+// Global styles
+
+html {
+  box-sizing: border-box;
+  font-family: "IBMPlexSans", Arial, sans-serif;
+  font-size: 100%;
+  font-weight: 600;
+}
+
+pre {
+  font-size: 120%;
+}
+
+ul, li, p {
+  margin: 20px;
+}
+
+ul {
+  counter-reset: section;
+}
+
+li { 
+  list-style-type: none;
+  position: relative;
+  font-size: 1.8rem;
+  padding: 15px;
+  margin-bottom: 15px;
+  background: navy;
+  color: #fff;
+}
+
+p {
+  font-size: 1.0rem; 
+  line-height: 1.4rem;
+  margin-top: 15px;
+}
+
+li::before {
+    counter-increment: section;
+    content: counter(section);
+    text-align: center;
+    display: inline-block;
+    color: #000;
+    border-radius: 50%;
+    position: absolute;
+    left: -65px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 12px;
+    font-size: 2rem;
+    width: 25px;
+    height: 25px;
+    border: 2px solid #000;
+}
